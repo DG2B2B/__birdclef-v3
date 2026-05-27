@@ -1,0 +1,66 @@
+# BirdCLEF 2026 – Configuration
+# Chemins vers les données de la compétition
+
+paths:
+  data_root: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data"
+  train_audio: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data/train_audio"
+  train_csv: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data/train.csv"
+  taxonomy_csv: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data/taxonomy.csv"
+  sample_submission: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data/sample_submission.csv"
+  test_soundscapes: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data/test_soundscapes"
+  train_soundscapes: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data/train_soundscapes"
+  train_soundscapes_labels: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data/train_soundscapes_labels.csv"
+
+output:
+  data_dir: "data"
+  models_dir: "models"
+  norm_stats: "data/norm_stats.pkl"
+  segments_dir: "data/train_segments"
+  segments_csv: "data/train_segments/segments.csv"
+  folds_file: "data/folds.pkl"
+
+audio:
+  sr: 32000
+  duration: 5        # 5s segments (standard)
+  duration_20s: 20   # 20s chunks (1st place 2025 option)
+  silence_threshold_db: -40
+
+spec:
+  n_mels: 224
+  hop_length: 320
+  win_length: 800
+  n_fft: 4096
+  fmin: 0
+  fmax: 16000
+  target_frames: 224
+  top_db: 80.0
+
+augmentation:
+  spec_augment:
+    freq_mask_param: 10
+    time_mask_param: 20
+    n_freq_masks: 1
+    n_time_masks: 1
+    p: 0.5
+  mixup:
+    alpha: 0.5       # fixed blending (1st place 2025)
+  background_mix:
+    p: 0.3
+    noise_ratio: 0.3
+
+training:
+  n_classes: 234
+  n_folds: 5
+  seed: 42
+  batch_size: 64
+  epochs_teacher: 80
+  epochs_student: 40
+  lr: 0.001
+  weight_decay: 0.0001
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  distillation_alpha: 0.7
+  distillation_T: 2.0
+  early_stopping_patience: 10
+  warmup_ratio: 0.05
+  stochastic_depth_rate: 0.15
