@@ -1,0 +1,49 @@
+# BirdCLEF 2026 – Teacher Training Configuration
+
+# ── Paths ──
+paths:
+  train_csv: "data/train_segments/segments.csv"
+  folds_path: "data/folds.pkl"
+  norm_stats_path: "data/norm_stats.pkl"
+  taxonomy_csv: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data/taxonomy.csv"
+  sample_submission: "C:/Users/Utilisateur/Mon Drive/Kaggle/__birdclef-V2/birdclef-2026-data/sample_submission.csv"
+  output_dir: "models/teachers"
+
+# ── Model ──
+model:
+  backbone: "efficientnet_b0"
+  n_classes: 234
+  pretrained: true
+  use_sed_head: true
+  drop_path_rate: 0.0        # set to 0.15 for Noisy Student iterations
+
+# ── Training ──
+training:
+  n_folds: 5
+  fold: null                  # null = all folds, int = single fold
+  epochs: 80
+  batch_size: 64
+  lr: 0.001
+  weight_decay: 0.0001
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  warmup_epochs: 4
+  early_stopping_patience: 10
+  seed: 42
+  use_amp: true
+  num_workers: 2
+  log_interval: 50
+
+# ── Data ──
+data:
+  sr: 32000
+  use_pcen: false
+  target_frames: 224
+
+# ── Augmentation ──
+augmentation:
+  spec_augment: true
+  spec_freq_mask: 10
+  spec_time_mask: 20
+  mixup: true
+  mixup_alpha: 0.5
