@@ -10,14 +10,16 @@
 
 ```
 GPU disponibles:
-  [A6000]  VM louee 48 GB VRAM — 0.59€/h — illimite en temps
-  [K1]     Kaggle account #1 T4 16 GB — 30h/semaine gratuites
-  [K2]     Kaggle account #2 T4 16 GB — 30h/semaine gratuites
-  [K3]     Kaggle account #3 T4 16 GB — 30h/semaine gratuites (optionnel)
-  [Colab]  Google Colab T4 16 GB — ~25h/semaine gratuites (reco manuelle)
+  [A6000]  VM louee 48 GB VRAM — 0.59€/h — illimite en temps (setup auto)
+  [K1]     Kaggle account principal T4 16 GB — 30h/semaine gratuites
+  [C1]     Google Colab T4 16 GB — ~25h/semaine gratuites (reco manuelle)
+  [C2]     Google Colab T4 16 GB — ~25h/semaine (2e compte Google, optionnel)
 
-Total gratuit: ~85-115h/semaine de T4
-Total payant:  39h A6000 = 23€
+Total gratuit: ~55-80h/semaine de T4
+Total payant:  40h A6000 ≈ 23.60€
+
+Checkpoints: Google Drive (BirdCLEF2026/) partage entre tous les GPU.
+kaggle.json a la racine du repo (.gitignore).
 ```
 
 ---
@@ -93,15 +95,15 @@ Total payant:  39h A6000 = 23€
 | # | Job | Param | Temps 4090 | Temps T4 AMP | Route | Priorite |
 |---|---|---|---|---|---|---|
 | B0-0 | EffNet-B0 fold 0 | 5.3M | 35 min | 45 min | K1 | ⭐⭐⭐ |
-| B0-1 | EffNet-B0 fold 1 | 5.3M | 35 min | 45 min | K2 | ⭐⭐⭐ |
-| B0-2 | EffNet-B0 fold 2 | 5.3M | 35 min | 45 min | Colab | ⭐⭐⭐ |
-| B0-3 | EffNet-B0 fold 3 | 5.3M | 35 min | 45 min | K1 | ⭐⭐⭐ |
-| B0-4 | EffNet-B0 fold 4 | 5.3M | 35 min | 45 min | K2 | ⭐⭐⭐ |
-| B3-0 | EffNet-B3 fold 0 | 12.2M | 65 min | 85 min | K3 | ⭐⭐⭐ |
-| B3-1 | EffNet-B3 fold 1 | 12.2M | 65 min | 85 min | Colab | ⭐⭐⭐ |
-| B3-2 | EffNet-B3 fold 2 | 12.2M | 65 min | 85 min | K1 | ⭐⭐⭐ |
-| B3-3 | EffNet-B3 fold 3 | 12.2M | 65 min | 85 min | K2 | ⭐⭐⭐ |
-| B3-4 | EffNet-B3 fold 4 | 12.2M | 65 min | 85 min | K3 | ⭐⭐⭐ |
+| B0-1 | EffNet-B0 fold 1 | 5.3M | 35 min | 45 min | K1 | ⭐⭐⭐ |
+| B0-2 | EffNet-B0 fold 2 | 5.3M | 35 min | 45 min | C1 | ⭐⭐⭐ |
+| B0-3 | EffNet-B0 fold 3 | 5.3M | 35 min | 45 min | C1 | ⭐⭐⭐ |
+| B0-4 | EffNet-B0 fold 4 | 5.3M | 35 min | 45 min | C1 | ⭐⭐⭐ |
+| B3-0 | EffNet-B3 fold 0 | 12.2M | 65 min | 85 min | K1 | ⭐⭐⭐ |
+| B3-1 | EffNet-B3 fold 1 | 12.2M | 65 min | 85 min | K1 | ⭐⭐⭐ |
+| B3-2 | EffNet-B3 fold 2 | 12.2M | 65 min | 85 min | C1 | ⭐⭐⭐ |
+| B3-3 | EffNet-B3 fold 3 | 12.2M | 65 min | 85 min | C1 | ⭐⭐⭐ |
+| B3-4 | EffNet-B3 fold 4 | 12.2M | 65 min | 85 min | C1 | ⭐⭐⭐ |
 | SE-0 | SE-ResNeXt50 fold 0 | 27.5M | 75 min | 100 min | A6000 | ⭐⭐ |
 | SE-1 | SE-ResNeXt50 fold 1 | 27.5M | 75 min | 100 min | A6000 | ⭐⭐ |
 | SE-2 | SE-ResNeXt50 fold 2 | 27.5M | 75 min | 100 min | A6000 | ⭐⭐ |
@@ -133,16 +135,16 @@ Total payant:  39h A6000 = 23€
 
 | Job | Temps T4/Kaggle | Route |
 |---|---|---|
-| Rare-B0 × 5 folds | 20 min/fold | K1/K2 |
+| Rare-B0 × 5 folds | 20 min/fold | K1/C1 |
 
 ### Phase 8 — Distillation (15 jobs independants)
 
 | Job | Temps | Route |
 |---|---|---|
 | Teacher logits | 2h | A6000 |
-| EffNet-B0 student × 5 | 25 min/fold | K1/K2 |
-| EffVit-b0 student × 5 | 20 min/fold | K3/Colab |
-| MnasNet student × 5 | 20 min/fold | K1/K2 |
+| EffNet-B0 student × 5 | 25 min/fold | K1 |
+| EffVit-b0 student × 5 | 20 min/fold | C1/C2 |
+| MnasNet student × 5 | 20 min/fold | C1 |
 
 ---
 
@@ -200,43 +202,38 @@ Phase 8:  Teacher logits            (2h dedie)
 TOTAL A6000: ~40h mur × 0.59€ = 23.60€
 ```
 
-### Kaggle K1 (T4 30h/sem)
+### Kaggle K1 (T4 30h/sem — notebook GPU standard)
 
 ```
-Phase 3:  EffNet-B0 f0, f3 | EffNet-B3 f2     (~3.5h)
-Phase 6:  B0-PL f0-f1 | B3-PL f0-f1            (~3h/iter)
-Phase 7:  Rare-B0 f0-f2                         (~1h)
-Phase 8:  Student B0 f0-f2 | MnasNet f0-f1     (~2h)
-TOTAL K1: ~15h (sur 30h quota)
+Phase 3:  EffNet-B0 f0, f1 | EffNet-B3 f0, f1         (~5h)
+Phase 6:  B0-PL f0-f2 | B3-PL f0-f2                    (~5h/iter)
+Phase 7:  Rare-B0 f0-f4                                 (~1.5h)
+Phase 8:  Student B0 f0-f2 | MnasNet f0-f1             (~2h)
+TOTAL K1: ~20h (sur 30h quota)
 ```
 
-### Kaggle K2 (T4 30h/sem)
+### Colab C1 (T4 ~25h/sem — notebook `colab_train.ipynb.py`)
 
 ```
-Phase 3:  EffNet-B0 f1, f4 | EffNet-B3 f3     (~3.5h)
-Phase 6:  B0-PL f2-f4 | B3-PL f2-f3           (~3h/iter)
-Phase 7:  Rare-B0 f3-f4                         (~40min)
-Phase 8:  Student B0 f3-f4 | MnasNet f2-f4     (~2h)
-TOTAL K2: ~15h
+Phase 3:  EffNet-B0 f2, f3, f4                         (~3h)
+          EffNet-B3 f2, f3, f4                         (~4.5h)
+Phase 6:  B0-PL f3-f4 | B3-PL f3-f4                    (~4h)
+Phase 8:  Student B0 f3-f4 | EffVit-b0 f0-f1           (~2h)
+TOTAL C1: ~15h
 ```
 
-### Kaggle K3 (optionnel — T4 30h/sem)
+### Colab C2 (optionnel — 2e compte Google)
 
 ```
-Phase 3:  EffNet-B3 f0, f4                      (~3h)
-Phase 6:  B3-PL f4 | overflow                   (~2h)
-Phase 8:  EffVit-b0 × 5 folds                   (~2h)
-TOTAL K3: ~10h
+Phase 6:  Overflow PL folds si C1/K1 satures            (~5h)
+Phase 8:  EffVit-b0 f2-f4 | MnasNet f2-f4               (~3h)
+TOTAL C2: ~8h
 ```
 
-### Colab (T4 ~25h/sem — reco manuelle necessaire)
-
-```
-Phase 3:  EffNet-B0 f2 | EffNet-B3 f1           (~2.5h)
-Phase 6:  Overflow folds (si K1/K2 satures)     (variable)
-Phase 8:  EffVit-b0 × 2 folds | overflow         (~1h)
-TOTAL Colab: ~8h
-```
+**Checkpoint sync → Google Drive** :
+Tous les GPU sauvegardent dans `BirdCLEF2026/models/` sur Drive.
+Le notebook Colab le fait automatiquement. La VM A6000 via `sync_checkpoints.sh`.
+Kaggle K1 peut uploader vers un dataset Kaggle prive.
 
 ---
 
@@ -334,26 +331,26 @@ bash scripts/sync_checkpoints.sh   # start checkpoint streaming cron
 bash scripts/launch_a6000_jobs.sh  # lance SE+NF en // + coordination
 ```
 
-### Kaggle (chaque compte)
+### Kaggle K1
 
 ```python
-# Notebook K1/k2/k3_baseline.ipynb
+# Notebook K1_baseline.ipynb
 # 1. git clone + pip install
 # 2. Telecharger norm_stats.pkl + folds.pkl depuis dataset Kaggle
 # 3. Entrainer les folds assignes
 # 4. Sauvegarder .pth dans /kaggle/working/
-# 5. Uploader vers dataset Kaggle partage
+# 5. Uploader vers dataset Kaggle prive
 ```
 
-### Colab
+### Colab C1 (et C2)
 
 ```python
-# Notebook Colab_baseline.ipynb
-# 1. Monter Google Drive
-# 2. git clone + pip install
-# 3. Charger norm_stats/folds depuis Drive
-# 4. Entrainer fold assigne
-# 5. Sauvegarder .pth → Drive
+# Utiliser notebooks/colab_train.ipynb.py
+# 1. Ouvrir Colab → coller le contenu du fichier
+# 2. Modifier BACKBONE et FOLD dans Cell 2
+# 3. Run All
+# 4. Checkpoint auto-sauvegarde sur Google Drive
+# 5. Si crash: relancer avec le fold suivant (le script skip les checkpoints existants)
 ```
 
 ---
@@ -363,26 +360,28 @@ bash scripts/launch_a6000_jobs.sh  # lance SE+NF en // + coordination
 | Ressource | Jobs | Temps mur | Cout |
 |---|---|---|---|
 | A6000 VM | SE+NF profs + PL + logits | ~40h | **23.60€** |
-| Kaggle K1 | B0+B3 profs + PL + eleves | ~15h | Gratuit |
-| Kaggle K2 | B0+B3 profs + PL + eleves | ~15h | Gratuit |
-| Kaggle K3 | Overflow + EffVit | ~10h | Gratuit |
-| Colab | Overflow | ~8h | Gratuit |
+| Kaggle K1 | B0+B3 + PL + eleves | ~20h | Gratuit |
+| Colab C1 | B0+B3 + PL + eleves | ~15h | Gratuit |
+| Colab C2 | Overflow + EffVit | ~8h | Gratuit |
 | **TOTAL** | **Tous les jobs** | **~45h mur max** | **23.60€** |
 
-> **Sans A6000 (Kaggle seul):** ~55h mur, impossible en 7 jours avec quota 30h/sem/compte.  
-> **Sans parallelisme (A6000 seul, 1 run):** ~80h mur, 47€, pas de redondance.  
-> **Avec distribution:** 23.60€, redondance (si une ressource tombe, les autres continuent), delai ~2 jours.
+> **Sans A6000 (Kaggle+Colab seuls):** ~55h mur, faisable si C1+C2 tiennent.  
+> **Sans parallelisme (A6000 seul, 1 run):** ~80h mur, 47€.  
+> **Avec distribution:** 23.60€, redondance, delai ~2 jours.
 
 ---
 
 ## Actions immediate
 
-- [ ] Creer les comptes Kaggle K2, K3
-- [ ] Louer la VM A6000
-- [ ] Setup rclone Google Drive ou S3 pour streaming checkpoints
-- [ ] Upload norm_stats.pkl + folds.pkl + data/ vers chaque plateforme
-- [ ] Preparer notebooks Kaggle pour K1, K2, K3
-- [ ] Preparer notebook Colab
-- [ ] Lancer `scripts/launch_a6000_jobs.sh` sur la VM
-- [ ] Lancer les notebooks Kaggle/Colab
-- [ ] Monitorer via `scripts/check_progress.py`
+- [ ] Louer la VM A6000 (coquille vide Linux)
+- [ ] Creer dossier `BirdCLEF2026/` sur Google Drive
+- [ ] Placer `kaggle.json` a la racine du repo
+- [ ] Uploader `norm_stats.pkl` + `folds.pkl` sur Google Drive (depuis ton PC local)
+- [ ] Lancer `bash scripts/setup_a6000.sh` sur la VM
+- [ ] Lancer `bash scripts/launch_a6000_jobs.sh` sur la VM
+- [ ] Ouvrir Colab C1 → coller `notebooks/colab_train.ipynb.py` → Run All
+- [ ] Ouvrir Colab C2 (si 2e compte) → idem, choisir autres folds
+- [ ] Kaggle K1 → notebook GPU avec les folds restants
+- [ ] Monitorer via `python scripts/check_progress.py`
+
+**Colab te demandera :** ouvrir le notebook, changer `BACKBONE` et `FOLD` dans la Cell 2, puis Run All. Checkpoint auto-sauvegarde sur Drive. Si le runtime crash, relance avec le fold suivant. Le script skip les checkpoints deja sur Drive.
