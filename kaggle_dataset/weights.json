@@ -1,0 +1,5 @@
+{
+    "models": ["perch_direct"],
+    "weights": [1.0],
+    "description": "Baseline: Perch direct logits mapped to BirdCLEF species. No trained classifier yet."
+}

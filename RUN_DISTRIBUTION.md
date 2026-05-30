@@ -1,303 +1,155 @@
-# RUN DISTRIBUTION — BirdCLEF 2026 Multi-GPU Execution Plan
+# RUN DISTRIBUTION — BirdCLEF 2026 Plan d'Exécution (PIVOT PERCH)
 
-> **Statut**: Plan d'execution — pret a etre deploye des que la VM A6000 est louee.  
-> **Date**: 27 mai 2026  
-> **Deadline competition**: 3 juin 2026 (J-7)
-
----
-
-## Vue d'ensemble
-
-```
-GPU disponibles:
-  [A6000]  VM louee 48 GB VRAM — 0.59€/h — illimite en temps (setup auto)
-  [K1]     Kaggle account principal T4 16 GB — 30h/semaine gratuites
-  [C1]     Google Colab T4 16 GB — ~25h/semaine gratuites (reco manuelle)
-  [C2]     Google Colab T4 16 GB — ~25h/semaine (2e compte Google, optionnel)
-
-Total gratuit: ~55-80h/semaine de T4
-Total payant:  40h A6000 ≈ 23.60€
-
-Checkpoints: Google Drive (BirdCLEF2026/) partage entre tous les GPU.
-kaggle.json a la racine du repo (.gitignore).
-```
+> **Statut**: 🔄 PIVOT vers approche Perch — 0 VM GPU nécessaire, 0 upload de specs  
+> **Date**: 30 mai 2026 — J-4 avant deadline  
+> **Deadline competition**: 3 juin 2026 (J-4)  
+> **Décision clé**: Abandon CNN from scratch → Perch ONNX + SSM léger sur Kaggle gratuit
 
 ---
 
-## Graphe de dependances
+## 🎯 Pourquoi le Pivot ?
 
-```
-                    ┌─────────────────────────────────────────────┐
-                    │         Phase 1: Preprocessing (CPU)        │
-                    │  segments + norm_stats + folds              │
-                    │  [DEJA FAIT localement]                     │
-                    └─────────────────────┬───────────────────────┘
-                                          │
-            ┌─────────────────────────────┼─────────────────────────────┐
-            │                             │                             │
-            ▼                             ▼                             ▼
-┌───────────────────────┐   ┌───────────────────────┐   ┌───────────────────────┐
-│ Phase 3: Profs baseline│   │ Phase 4: Conformer     │   │ Phase 5: Perch         │
-│ 20 jobs independants   │   │ (skip initial)         │   │ (skip initial)         │
-│ B0×5 B3×5 SE×5 NF×5   │   │                        │   │                        │
-└───────────┬───────────┘   └───────────────────────┘   └───────────────────────┘
-            │
-            │ DES qu'UN modele a tous ses folds termines
-            ▼
-┌──────────────────────────────────────────────────────────────┐
-│ Phase 6 ITER 1: Pseudo-labels                                │
-│  Step A: Generer PL sur soundscapes (CPU, 30 min) [A6000]    │
-│  Step B: Creer dataset enrichi (CPU, instant)       [A6000]  │
-│  Step C: Retrain TOUS les profs avec PL (GPU)                │
-│    5 folds × 4 archis = 20 jobs independants                 │
-│    B0×5 B3×5 SE×5 NF×5 — mais 40 epochs, pas 80              │
-└───────────┬──────────────────────────────────────────────────┘
-            │
-            ▼
-┌──────────────────────────────────────────────────────────────┐
-│ Phase 6 ITER 2: Power=0.65, meme pattern                      │
-│  Retrain depuis checkpoints iter 1                            │
-└───────────┬──────────────────────────────────────────────────┘
-            │
-            ▼
-┌──────────────────────────────────────────────────────────────┐
-│ Phase 6 ITER 3: Power=0.55 (modeles lourds: B3+SE+NF)        │
-│ Phase 6 ITER 4: Power=0.60 (final)                            │
-└───────────┬──────────────────────────────────────────────────┘
-            │──────────┐
-            │          │ Phase 7: Rare species (1 modele × 5 folds)
-            │          │ INDEPENDANT — peut tourner n'importe quand
-            │◄─────────┘
-            ▼
-┌──────────────────────────────────────────────────────────────┐
-│ Phase 8: Distillation                                         │
-│  Step A: Generer teacher logits (GPU, 2h)           [A6000]  │
-│  Step B: Entrainer 3 eleves × 5 folds = 15 jobs independants │
-│     EffNet-B0 ×5, EffVit-b0 ×5, MnasNet ×5                   │
-└───────────┬──────────────────────────────────────────────────┘
-            │
-            ▼
-┌──────────────────────────────────────────────────────────────┐
-│ Phase 9-10-11: Fusion + ONNX + Submission (CPU)               │
-│  Independants du GPU — peuvent tourner en parallele           │
-│  Fusion: 10 min CPU                                           │
-│  ONNX export: 5 min CPU                                       │
-│  Submission notebook: test ~30 min CPU                        │
-└──────────────────────────────────────────────────────────────┘
-```
-
----
-
-## Inventaire des jobs GPU
-
-### Phase 3 — Profs baseline (20 jobs independants)
-
-| # | Job | Param | Temps 4090 | Temps T4 AMP | Route | Priorite |
-|---|---|---|---|---|---|---|
-| B0-0 | EffNet-B0 fold 0 | 5.3M | 35 min | 45 min | K1 | ⭐⭐⭐ |
-| B0-1 | EffNet-B0 fold 1 | 5.3M | 35 min | 45 min | K1 | ⭐⭐⭐ |
-| B0-2 | EffNet-B0 fold 2 | 5.3M | 35 min | 45 min | C1 | ⭐⭐⭐ |
-| B0-3 | EffNet-B0 fold 3 | 5.3M | 35 min | 45 min | C1 | ⭐⭐⭐ |
-| B0-4 | EffNet-B0 fold 4 | 5.3M | 35 min | 45 min | C1 | ⭐⭐⭐ |
-| B3-0 | EffNet-B3 fold 0 | 12.2M | 65 min | 85 min | K1 | ⭐⭐⭐ |
-| B3-1 | EffNet-B3 fold 1 | 12.2M | 65 min | 85 min | K1 | ⭐⭐⭐ |
-| B3-2 | EffNet-B3 fold 2 | 12.2M | 65 min | 85 min | C1 | ⭐⭐⭐ |
-| B3-3 | EffNet-B3 fold 3 | 12.2M | 65 min | 85 min | C1 | ⭐⭐⭐ |
-| B3-4 | EffNet-B3 fold 4 | 12.2M | 65 min | 85 min | C1 | ⭐⭐⭐ |
-| SE-0 | SE-ResNeXt50 fold 0 | 27.5M | 75 min | 100 min | A6000 | ⭐⭐ |
-| SE-1 | SE-ResNeXt50 fold 1 | 27.5M | 75 min | 100 min | A6000 | ⭐⭐ |
-| SE-2 | SE-ResNeXt50 fold 2 | 27.5M | 75 min | 100 min | A6000 | ⭐⭐ |
-| SE-3 | SE-ResNeXt50 fold 3 | 27.5M | 75 min | 100 min | A6000 | ⭐⭐ |
-| SE-4 | SE-ResNeXt50 fold 4 | 27.5M | 75 min | 100 min | A6000 | ⭐⭐ |
-| NF-0 | NFNet-F0 fold 0 | 71.5M | 100 min | 130 min | A6000 | ⭐⭐ |
-| NF-1 | NFNet-F0 fold 1 | 71.5M | 100 min | 130 min | A6000 | ⭐⭐ |
-| NF-2 | NFNet-F0 fold 2 | 71.5M | 100 min | 130 min | A6000 | ⭐⭐ |
-| NF-3 | NFNet-F0 fold 3 | 71.5M | 100 min | 130 min | A6000 | ⭐⭐ |
-| NF-4 | NFNet-F0 fold 4 | 71.5M | 100 min | 130 min | A6000 | ⭐⭐ |
-
-> **Strategie P3**: B0+B3 sur Kaggle/Colab (priorite max — debute Phase 6 au plus tot).  
-> SE+NF sur A6000 en parallele 2-a-2. Des que B0 a ses 5 folds → lancer Phase 6 iter 1.
-
-### Phase 6 iter 1 — Retrain avec pseudo-labels (20 jobs)
-
-| Job | Temps A6000 | Notes |
+| Contrainte | Approche originale (CNN) | Nouvelle approche (Perch) |
 |---|---|---|
-| B0-PL1 × 5 folds | 4h (2 en //) | Plus rapide: 40 epochs, fine-tuning |
-| B3-PL1 × 5 folds | 6h (2 en //) | 40 epochs |
-| SE-PL1 × 5 folds | 7h (2 en //) | 40 epochs |
-| NF-PL1 × 5 folds | 9h (2 en //) | 40 epochs |
-
-### Phase 6 iter 2-4 (20 jobs chacun, progressivement plus rapide)
-
-> Meme pattern. Temps reduit car fine-tuning depuis iteration precedente.
-
-### Phase 7 — Rare species (5 jobs independants)
-
-| Job | Temps T4/Kaggle | Route |
-|---|---|---|
-| Rare-B0 × 5 folds | 20 min/fold | K1/C1 |
-
-### Phase 8 — Distillation (15 jobs independants)
-
-| Job | Temps | Route |
-|---|---|---|
-| Teacher logits | 2h | A6000 |
-| EffNet-B0 student × 5 | 25 min/fold | K1 |
-| EffVit-b0 student × 5 | 20 min/fold | C1/C2 |
-| MnasNet student × 5 | 20 min/fold | C1 |
+| VM GPU | A6000 payante (~2-5$/h) | ❌ Pas besoin |
+| Upload Kaggle | 130 Go de specs .npy | ~500 Mo ONNX ✅ |
+| Entraînement | 4×5 folds CNN lourds (jours) | 5-fold SSM léger (3-5h) ✅ |
+| 28 espèces zero-shot | Données XC à collecter | Déjà dans Perch ✅ |
+| Score potentiel | 0.92+ (si tout réussi) | 0.93-0.95 (notebooks publics existants) ✅ |
 
 ---
 
-## Plan d'execution timeline
+## Vue d'ensemble — ÉTAT RÉEL AU 30 MAI
 
 ```
-J-7 (27 mai) ──────────────────────────────────────────── J-1 ── J-0 (3 juin)
-│                                                              │
-│  HEURE 0: Lancer VM A6000 + setup                            │
-│  HEURE 1: Lancer B0×5 + B3×5 sur Kaggle/Colab (parallele)   │
-│           Lancer SE×2 + NF×2 en // sur A6000 (2 paires)      │
-│                                                              │
-│  HEURE 7: B0 5 folds termines → LANCER Phase 6 iter 1       │
-│           Step A+B sur A6000 (CPU, 30 min)                   │
-│           Step C: B0-PL1×5 sur Kaggle/Colab                  │
-│                                                              │
-│  HEURE 12: B3 5 folds termines → B3-PL1×5 sur Kaggle        │
-│  HEURE 15: SE-ResNeXt50 5 folds termines sur A6000           │
-│            → SE-PL1×5 sur A6000                              │
-│                                                              │
-│  HEURE 18: B0-PL1 termine → iter 2 si AUC > iter 1           │
-│  HEURE 24: NFNet-F0 termine sur A6000 → NF-PL1               │
-│                                                              │
-│  HEURE 25-35: Iters PL 2-3-4 en cascade                      │
-│               Phase 7 (rare) en parallele sur slot libre      │
-│                                                              │
-│  HEURE 36: Teacher logits (A6000, 2h)                        │
-│  HEURE 38: Distillation 15 jobs sur Kaggle/Colab (3h)        │
-│                                                              │
-│  HEURE 41: Fusion + ONNX (CPU, 1h)                           │
-│  HEURE 42: Upload modele dataset Kaggle                      │
-│  HEURE 43: Test submission notebook → soumettre              │
-│                                                              │
-│  REPITER: ameliorations, ajustements, re-soumissions         │
-│           jusqu'a J-0 23h59                                  │
-└──────────────────────────────────────────────────────────────┘
+Ressources disponibles:
+  [VM-GC]   VM Google Cloud CPU — ⚠️ Inaccessible (arrêtée/expirée)
+            Preprocessing terminé: ~235 000 specs .npy (~135 GB)
+            Données sur GDrive ? (à vérifier)
+            
+  [K1]      Kaggle account principal T4 16 GB — 30h/semaine — ✅ RESET dispo
+            Utilisable pour entraînement Perch+SSM
+            
+  [C1]      Google Colab T4 16 GB — ~25h/semaine gratuites — backup
+
+  [Kaggle]  Ressources gratuites sur la plateforme:
+            - Google Perch ONNX (rishikeshjani, 427 MB)
+            - Modèles publics pré-entraînés (tonylica, 775 MB)
+            - Notebooks publics 0.934-0.947 LB
 ```
 
 ---
 
-## Routage des jobs par GPU
-
-### A6000 (VM louee — 48 GB — jobs lourds + coordination)
+### Chronologie réelle (30 mai 2026)
 
 ```
-Phase 3:  SE-ResNeXt50 × 5 folds  (// par paires, ~15h mur)
-          NFNet-F0 × 5 folds       (// par paires, ~22h mur)
-          TOTAL P3 A6000: ~23h mur (SE+NF en //)
-
-Phase 6:  PL iter 1-4 pour SE+NF   (~13h mur par iteration)
-          TOTAL P6 A6000: ~15-20h mur
-
-Phase 8:  Teacher logits            (2h dedie)
-
-TOTAL A6000: ~40h mur × 0.59€ = 23.60€
+28 mai 22:44  → VM GCloud démarrée, preprocessing 14 workers
+29 mai ~01:45 → Preprocessing terminé (~235k .npy)
+29 mai        → Décision: les 130 Go ne passeront jamais sur Kaggle
+29 mai        → Recherche: Perch + modèles publics sur Kaggle
+30 mai        → PIVOT acté: approche Perch ONNX + SSM léger
+30 mai        → Notebooks créés: submission_perch.py, train_perch_ssm.py, ensemble_blend.py
+J-4 à J-1     → Exécution sur Kaggle K1/Colab
 ```
-
-### Kaggle K1 (T4 30h/sem — notebook GPU standard)
-
-```
-Phase 3:  EffNet-B0 f0, f1 | EffNet-B3 f0, f1         (~5h)
-Phase 6:  B0-PL f0-f2 | B3-PL f0-f2                    (~5h/iter)
-Phase 7:  Rare-B0 f0-f4                                 (~1.5h)
-Phase 8:  Student B0 f0-f2 | MnasNet f0-f1             (~2h)
-TOTAL K1: ~20h (sur 30h quota)
-```
-
-### Colab C1 (T4 ~25h/sem — notebook `colab_train.ipynb.py`)
-
-```
-Phase 3:  EffNet-B0 f2, f3, f4                         (~3h)
-          EffNet-B3 f2, f3, f4                         (~4.5h)
-Phase 6:  B0-PL f3-f4 | B3-PL f3-f4                    (~4h)
-Phase 8:  Student B0 f3-f4 | EffVit-b0 f0-f1           (~2h)
-TOTAL C1: ~15h
-```
-
-### Colab C2 (optionnel — 2e compte Google)
-
-```
-Phase 6:  Overflow PL folds si C1/K1 satures            (~5h)
-Phase 8:  EffVit-b0 f2-f4 | MnasNet f2-f4               (~3h)
-TOTAL C2: ~8h
-```
-
-**Checkpoint sync → Google Drive** :
-Tous les GPU sauvegardent dans `BirdCLEF2026/models/` sur Drive.
-Le notebook Colab le fait automatiquement. La VM A6000 via `sync_checkpoints.sh`.
-Kaggle K1 peut uploader vers un dataset Kaggle prive.
 
 ---
 
-## Checkpointing & Crash Recovery
+## 📦 Stratégie Perch (3 Piliers)
 
-### Structure des checkpoints
+### Pilier 1 ⭐ — Forker l'ensemble EoS de nina2025 (0.947 LB)
+- Notebook: `nina2025/birdclef-2026-ensemble-of-solutions`
+- Utilise datasets publics Kaggle uniquement
+- Runtime: 12m49s — tourne sur GPU Kaggle gratuit
+- Si les datasets privés sont inaccessibles → Pilier 2
 
+### Pilier 2 ⭐ — Perch + SSM Léger (autonome, reproductible)
+- **Étape 1**: Extraire embeddings Perch pour tous les segments train
+- **Étape 2**: Entraîner ProtoSSM 5-fold (3-5h sur T4)
+- **Étape 3**: Pseudo-labeling itératif + Power Transform
+- **Étape 4**: Exporter classifier_ssm.onnx (~20 MB)
+- **Étape 5**: Inférence: Perch ONNX → embedding → classifier ONNX → submission
+- Notebook: `notebooks/train_perch_ssm.py`
+- Soumission: `notebooks/submission_perch.py`
+
+### Pilier 3 — Ensemble + Modèles Publics
+- Fusionner: Perch direct logits + SSM classifier + modèles publics (tonylica)
+- Optimiser poids via scipy.optimize
+- Calibration Platt optionnelle
+- Notebook: `notebooks/ensemble_blend.py`
+
+---
+
+## 📋 Plan d'Action J-4 à J-1
+
+### Jour 1 (30 mai) — Setup Kaggle
+- [ ] Uploader `rishikeshjani/perch-onnx-for-birdclef-2026` comme dataset Kaggle
+- [ ] Forker et tester `nina2025/birdclef-2026-ensemble-of-solutions`
+- [ ] Si datasets privés bloquants → passer au Pilier 2
+- [ ] Lancer `train_perch_ssm.py` sur K1 (extraction embeddings + training SSM)
+
+### Jour 2 (31 mai) — Entraînement + Pseudo-labels
+- [ ] Finaliser 5-fold SSM training
+- [ ] Lancer pseudo-labeling iteration 1
+- [ ] Ré-entraîner avec 50% réel + 50% pseudo
+- [ ] Exporter classifier_ssm.onnx
+
+### Jour 3 (1 juin) — Ensemble & Soumission Test
+- [ ] Fusionner les prédictions (Perch + SSM + publics)
+- [ ] Optimiser poids d'ensemble
+- [ ] Exécuter `submission_perch.py` en mode test
+- [ ] Vérifier runtime < 90 min CPU
+- [ ] Soumettre et vérifier score public
+
+### Jour 4 (2 juin) — Derniers Ajustements
+- [ ] Si score < 0.92: ajuster poids, ajouter calibration
+- [ ] Si score >= 0.93: soumission finale
+- [ ] Option: intégrer vos specs pour un CNN complémentaire si temps
+
+---
+
+## 📂 Fichiers Clés (Nouveaux)
+
+| Fichier | Rôle |
+|---|---|
+| `notebooks/submission_perch.py` | Notebook soumission CPU (Perch ONNX + classifieur) |
+| `notebooks/train_perch_ssm.py` | Entraînement SSM sur embeddings Perch (GPU Kaggle) |
+| `notebooks/ensemble_blend.py` | Fusion et optimisation des poids d'ensemble |
+| `notebooks/submission_notebook.py` | Ancien notebook CNN (conservé comme fallback) |
+
+### Dataset Kaggle à Préparer
 ```
-models/
-├── teachers/
-│   ├── efficientnet_b0/
-│   │   ├── efficientnet_b0_fold0.pth
-│   │   └── ...
-│   ├── efficientnet_b3/
-│   ├── se_resnext50/
-│   └── nfnet_f0/
-├── teachers_pl/
-│   ├── pl_iter1/
-│   │   ├── efficientnet_b0/
-│   │   └── ...
-│   └── pl_iter2/
-├── students/
-│   ├── efficientnet_b0/
-│   ├── efficientvit_b0/
-│   └── mnasnet_100/
-└── fusion/
-    ├── weights.json
-    └── calibrators.pkl
-
-data/
-├── folds.pkl
-├── norm_stats.pkl
-└── pseudo_labels/
-    ├── pseudo_labels_iter1.csv
-    ├── train_enriched_iter1.csv
-    └── ...
+birdclef-perch-models/
+├── perch_v2.onnx              # Depuis rishikeshjani/perch-onnx-for-birdclef-2026
+├── labels.csv                 # Depuis le même dataset
+├── classifier_ssm.onnx        # Votre classifieur entraîné (~20 MB)
+├── config.pkl                 # Paramètres du classifieur
+├── weights.json               # Poids d'ensemble
+└── calibrators.pkl            # Optionnel
 ```
 
-### Streaming automatise (A6000 → stockage permanent)
+---
 
-```bash
-# scripts/sync_checkpoints.sh — lance en crontab toutes les 5 min
-#!/bin/bash
-REMOTE="gdrive:/BirdCLEF2026/checkpoints/"   # ou S3, Dropbox, Kaggle dataset...
+## ⚠️ Points de Vigilance
 
-# Upload tous les .pth modifies dans les 10 dernieres minutes
-find models/ -name "*.pth" -mmin -10 | while read f; do
-    rclone copy "$f" "$REMOTE/$(dirname $f)/" --progress
-done
+1. **Reset quota K1**: Vérifier que le quota GPU est bien reset (~29-30 mai)
+2. **Datasets privés nina2025**: Le notebook EoS référence des "Private Dataset" → peuvent être inaccessibles
+3. **Perch ONNX performance**: ~427 MB, inférence CPU — à benchmarker
+4. **130 Go de specs**: Les garder sur GDrive comme sécurité, ne pas uploader sur Kaggle
+5. **Fallback**: Si tout échoue, l'ancien `submission_notebook.py` peut être adapté avec les modèles publics (tonylica)
 
-# Upload les CSVs pseudo-labels
-find data/pseudo_labels/ -name "*.csv" -mmin -10 | while read f; do
-    rclone copy "$f" "$REMOTE/data/pseudo_labels/"
-done
+---
 
-# Upload weights.json
-rclone copy models/fusion/weights.json "$REMOTE/models/fusion/"
-```
+## 🔗 Références Kaggle
 
-### Reprise apres crash/expiration VM
+| Ressource | URL |
+|---|---|
+| Perch ONNX | `rishikeshjani/perch-onnx-for-birdclef-2026` |
+| Modèles publics | `tonylica/birdclef-2026-model` |
+| EoS Ensemble (0.947) | `nina2025/birdclef-2026-ensemble-of-solutions` |
+| Iter-Pseudo Perch+SED (0.934) | `needless090/birdclef-2026-iter-pseudo-perch-sed-lb-0.934-s` |
+| Perch+ProtoSSM (0.925) | `imaadmahmood/birdclef-2026-perch-v2-protossm-0-925` |
+| Reproduce Perch+SSM | `hideyukizushi/bird26-reproduce-perch-protossm-resssm-inf-train` |
 
-```bash
-# scripts/resume.sh
-#!/bin/bash
 # 1. Telecharger les derniers checkpoints
 rclone copy "$REMOTE/models/" models/ --progress
 

@@ -1,0 +1,74 @@
+# BirdCLEF 2026 – Perch Configuration
+# Substituted paths for Kaggle environment
+
+paths:
+  # Kaggle competition data
+  comp_dir: "/kaggle/input/birdclef-2026"
+  train_audio: "/kaggle/input/birdclef-2026/train_audio"
+  train_csv: "/kaggle/input/birdclef-2026/train.csv"
+  taxonomy_csv: "/kaggle/input/birdclef-2026/taxonomy.csv"
+  sample_submission: "/kaggle/input/birdclef-2026/sample_submission.csv"
+  test_soundscapes: "/kaggle/input/birdclef-2026/test_soundscapes"
+
+  # Uploaded model dataset
+  model_dir: "/kaggle/input/birdclef-perch-models"
+  perch_onnx: "/kaggle/input/birdclef-perch-models/perch_v2.onnx"
+  perch_labels: "/kaggle/input/birdclef-perch-models/labels.csv"
+  classifier_onnx: "/kaggle/input/birdclef-perch-models/classifier_ssm.onnx"
+  weights_json: "/kaggle/input/birdclef-perch-models/weights.json"
+  calibrators_pkl: "/kaggle/input/birdclef-perch-models/calibrators.pkl"
+  config_pkl: "/kaggle/input/birdclef-perch-models/config.pkl"
+
+  # Output
+  output_dir: "/kaggle/working"
+  submission_path: "/kaggle/working/submission.csv"
+
+# Perch Model
+perch:
+  embedding_dim: 1536
+  sr: 32000
+  segment_duration: 5       # seconds
+  segment_samples: 160000   # sr * duration
+
+# Classifier (ProtoSSM)
+classifier:
+  embedding_dim: 1536
+  hidden_dim: 512
+  n_layers: 3
+  dropout: 0.2
+  n_classes: 234
+
+# Training
+training:
+  n_folds: 5
+  seed: 42
+  epochs: 50
+  batch_size: 256
+  lr: 0.001
+  weight_decay: 0.0001
+  focal_alpha: 0.25
+  focal_gamma: 2.0
+  warmup_epochs: 3
+  early_stopping_patience: 10
+
+# Pseudo-labeling
+pseudo_labeling:
+  n_iterations: 2
+  threshold: 0.9
+  power: 0.7
+  mix_ratio: 0.5             # 50% real, 50% pseudo-labeled
+
+# Inference
+inference:
+  batch_size: 32             # Perch ONNX batch
+  classifier_batch: 128      # Classifier batch (larger, lighter model)
+  sliding_window: true
+  sliding_step_sec: 2.5
+  smoothing_kernel: [0.1, 0.2, 0.4, 0.2, 0.1]
+  n_threads: 8
+
+# Ensemble
+ensemble:
+  perch_weight: 0.4
+  classifier_weight: 0.6
+  do_calibration: false      # Platt scaling per species
