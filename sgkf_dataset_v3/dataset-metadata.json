@@ -1,0 +1,9 @@
+{
+    "title":  "BirdCLEF 2026 - SGKF Pretrained Models v3",
+    "licenses":  [
+                     {
+                         "name":  "CC0-1.0"
+                     }
+                 ],
+    "id":  "hellodave2035/birdclef-sgkf-models-v3"
+}

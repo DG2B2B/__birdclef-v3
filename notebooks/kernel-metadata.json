@@ -1,15 +1,26 @@
 {
-  "id": "hellodave2035/perch-test-submission",
-  "title": "Perch Test Submission",
-  "code_file": "test_submission_perch.ipynb",
-  "language": "python",
-  "kernel_type": "notebook",
-  "is_private": true,
-  "enable_gpu": false,
-  "enable_tpu": false,
-  "enable_internet": false,
-  "dataset_sources": ["hellodave2035/birdclef-perch-models"],
-  "competition_sources": ["birdclef-2026"],
-  "kernel_sources": [],
-  "model_sources": []
+    "id":  "hellodave2035/eos-submit-v2",
+    "title":  "EoS Submit v2",
+    "code_file":  "eos_submit_v2.ipynb",
+    "language":  "python",
+    "kernel_type":  "notebook",
+    "is_private":  true,
+    "enable_gpu":  false,
+    "enable_tpu":  false,
+    "enable_internet":  false,
+    "dataset_sources":  [
+                            "hellodave2035/birdclef-perch-models",
+                            "hideyukizushi/sgkfk-202604041716",
+                            "tuckerarrants/bc2026-distilled-sed-public",
+                            "tuckerarrants/birdclef-2026-waveform-cache"
+                        ],
+    "competition_sources":  [
+                                "birdclef-2026"
+                            ],
+    "kernel_sources":  [
+
+                       ],
+    "model_sources":  [
+                          "google/bird-vocalization-classifier/tensorFlow2/perch_v2_cpu/1"
+                      ]
 }
