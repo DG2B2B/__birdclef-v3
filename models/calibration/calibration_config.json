@@ -1,0 +1,2584 @@
+{
+  "calibration_coeffs": {
+    "116570": {
+      "intercept": 5.097284909780069,
+      "coef": 3.0416821555799505
+    },
+    "1491113": {
+      "intercept": 1.6509149745377072,
+      "coef": 0.6956062174126769
+    },
+    "22961": {
+      "intercept": -5.390438985653502,
+      "coef": -0.560966893439437
+    },
+    "22967": {
+      "intercept": 1.8427344274836142,
+      "coef": 0.30167102366074433
+    },
+    "22973": {
+      "intercept": -0.02924220754039883,
+      "coef": 0.6430148091259148
+    },
+    "23158": {
+      "intercept": 0.4764347098775837,
+      "coef": 1.3909211367422303
+    },
+    "24279": {
+      "intercept": -1.5596079634352509,
+      "coef": 0.8929242468335001
+    },
+    "24321": {
+      "intercept": 2.8882349703970998,
+      "coef": 0.5112533909898241
+    },
+    "25073": {
+      "intercept": 3.1265014520460936,
+      "coef": 0.4011138820762059
+    },
+    "25092": {
+      "intercept": -1.2713483389241529,
+      "coef": -0.26893767738574054
+    },
+    "326272": {
+      "intercept": 2.610107692553188,
+      "coef": 0.8165596435112702
+    },
+    "43435": {
+      "intercept": 4.114833585983204,
+      "coef": 2.425338455898846
+    },
+    "47144": {
+      "intercept": -0.0836986703399775,
+      "coef": 1.3072217972990507
+    },
+    "47158son01": {
+      "intercept": -34.364206306362114,
+      "coef": -3.418612170936772
+    },
+    "47158son02": {
+      "intercept": -49.31685008447844,
+      "coef": -4.886996410239688
+    },
+    "47158son03": {
+      "intercept": 0.29954181549991554,
+      "coef": 0.034312665640552534
+    },
+    "47158son04": {
+      "intercept": 3.3666919035395964,
+      "coef": 0.40860615225907504
+    },
+    "47158son06": {
+      "intercept": 3.6349206148049102,
+      "coef": 0.955068115091265
+    },
+    "47158son07": {
+      "intercept": 0.17404900341645405,
+      "coef": 1.6467822539799726
+    },
+    "47158son08": {
+      "intercept": -2.4636303247039923,
+      "coef": -0.26586426591868006
+    },
+    "47158son09": {
+      "intercept": -40.16337146127656,
+      "coef": -3.9797421542838562
+    },
+    "47158son10": {
+      "intercept": 5.183813054709012,
+      "coef": 1.446379683216616
+    },
+    "47158son11": {
+      "intercept": -11.826339645402502,
+      "coef": 8.273566181282296
+    },
+    "47158son12": {
+      "intercept": -44.79166183037307,
+      "coef": -4.4363988777263
+    },
+    "47158son13": {
+      "intercept": 1.969338554604932,
+      "coef": 0.3055027176765742
+    },
+    "47158son14": {
+      "intercept": -51.34213177154683,
+      "coef": -5.092177438997229
+    },
+    "47158son15": {
+      "intercept": -58.97108424324642,
+      "coef": -5.854799389542352
+    },
+    "47158son16": {
+      "intercept": -58.97108424324642,
+      "coef": -5.854799389542352
+    },
+    "47158son17": {
+      "intercept": 1.1784120169395318,
+      "coef": 0.9714280759893515
+    },
+    "47158son18": {
+      "intercept": -53.56588741789842,
+      "coef": -5.312844643679032
+    },
+    "47158son19": {
+      "intercept": 7.147351868868424,
+      "coef": 2.187820981408193
+    },
+    "47158son20": {
+      "intercept": -53.34623064937211,
+      "coef": -5.292462630188767
+    },
+    "47158son21": {
+      "intercept": 2.534107526804841,
+      "coef": 2.8286240685260604
+    },
+    "47158son22": {
+      "intercept": 2.873638834421625,
+      "coef": 3.0816198333204112
+    },
+    "47158son23": {
+      "intercept": 2.873638834421625,
+      "coef": 3.0816198333204112
+    },
+    "47158son24": {
+      "intercept": -11.653509306425107,
+      "coef": 8.201845368750758
+    },
+    "47158son25": {
+      "intercept": 1.9703637555470024,
+      "coef": 0.7916653338267033
+    },
+    "517063": {
+      "intercept": 2.497645147513202,
+      "coef": 0.4696723255787468
+    },
+    "555146": {
+      "intercept": -1.0188704439185237,
+      "coef": 0.7685331613715871
+    },
+    "65377": {
+      "intercept": 6.074467464662005,
+      "coef": 0.871038323464497
+    },
+    "65380": {
+      "intercept": -2.1801848789389826,
+      "coef": 0.8962308327720919
+    },
+    "66971": {
+      "intercept": 1.3829551969528924,
+      "coef": 0.8218256533440919
+    },
+    "67107": {
+      "intercept": 5.600103884355434,
+      "coef": 0.5553117530593262
+    },
+    "bafcur1": {
+      "intercept": 2.249683603302784,
+      "coef": 2.007861334086996
+    },
+    "bufpar": {
+      "intercept": -1.7490392843428924,
+      "coef": 2.6842516109063372
+    },
+    "chacha1": {
+      "intercept": -1.6915475622014748,
+      "coef": 0.9332764738485747
+    },
+    "chvcon1": {
+      "intercept": -1.364292237315903,
+      "coef": 1.8098801982420794
+    },
+    "compau": {
+      "intercept": -8.660083765757483,
+      "coef": 2.288241460107358
+    },
+    "hyamac1": {
+      "intercept": -7.25025862988263,
+      "coef": 4.108979820020684
+    },
+    "litnig1": {
+      "intercept": -0.6563117119052772,
+      "coef": 1.0598292632143391
+    },
+    "magant1": {
+      "intercept": 1.9757871856241032,
+      "coef": 2.653018003086812
+    },
+    "nacnig1": {
+      "intercept": -0.5931338099632465,
+      "coef": -0.28800926948700745
+    },
+    "orwpar": {
+      "intercept": -22.77671225835548,
+      "coef": 6.385036175998156
+    },
+    "purjay1": {
+      "intercept": 1.306567561073264,
+      "coef": 2.1735872134285703
+    },
+    "redjun": {
+      "intercept": 0.06790935640969094,
+      "coef": 0.44917450667212055
+    },
+    "trsowl": {
+      "intercept": -1.3979776615458452,
+      "coef": 0.5198580033135184
+    },
+    "undtin1": {
+      "intercept": -2.512735744533879,
+      "coef": 1.0139662106337655
+    },
+    "whtdov": {
+      "intercept": -5.140898582285924,
+      "coef": 1.7384925043331223
+    }
+  },
+  "species_weights": {
+    "1161364": 1.2791004180908203,
+    "116570": 0.3418539762496948,
+    "1176823": 1.2791004180908203,
+    "1491113": 0.1430077701807022,
+    "1595929": 1.2791004180908203,
+    "209233": 1.2791004180908203,
+    "22930": 1.2791004180908203,
+    "22956": 1.2791004180908203,
+    "22961": 0.2102828174829483,
+    "22967": 0.10241000354290009,
+    "22973": 0.08764251321554184,
+    "22983": 1.2791004180908203,
+    "22985": 1.2791004180908203,
+    "23150": 1.2791004180908203,
+    "23154": 1.2791004180908203,
+    "23158": 0.09641582518815994,
+    "23176": 1.2791004180908203,
+    "23724": 1.2791004180908203,
+    "24279": 0.09696836024522781,
+    "24285": 1.2791004180908203,
+    "24287": 1.2791004180908203,
+    "24321": 0.09724820405244827,
+    "244024": 1.2791004180908203,
+    "25073": 0.354758620262146,
+    "25092": 0.255820095539093,
+    "25214": 1.2791004180908203,
+    "326272": 0.2610952854156494,
+    "41970": 1.2791004180908203,
+    "43435": 0.354758620262146,
+    "47144": 0.3197751045227051,
+    "47158son01": 0.2610952854156494,
+    "47158son02": 0.4522302746772766,
+    "47158son03": 0.21936392784118652,
+    "47158son04": 0.30148687958717346,
+    "47158son05": 0.6395502090454102,
+    "47158son06": 0.29344576597213745,
+    "47158son07": 0.18272864818572998,
+    "47158son08": 0.30148687958717346,
+    "47158son09": 0.48345455527305603,
+    "47158son10": 0.21936392784118652,
+    "47158son11": 0.2102828174829483,
+    "47158son12": 0.5221905708312988,
+    "47158son13": 0.2102828174829483,
+    "47158son14": 0.354758620262146,
+    "47158son15": 0.354758620262146,
+    "47158son16": 0.354758620262146,
+    "47158son17": 0.19283165037631989,
+    "47158son18": 0.354758620262146,
+    "47158son19": 0.5221905708312988,
+    "47158son20": 0.354758620262146,
+    "47158son21": 0.26671087741851807,
+    "47158son22": 0.255820095539093,
+    "47158son23": 0.255820095539093,
+    "47158son24": 0.255820095539093,
+    "47158son25": 0.13873793184757233,
+    "476521": 1.2791004180908203,
+    "516975": 1.2791004180908203,
+    "517063": 0.07288351655006409,
+    "555123": 1.2791004180908203,
+    "555145": 1.2791004180908203,
+    "555146": 0.08955495059490204,
+    "64898": 1.2791004180908203,
+    "65377": 0.40448707342147827,
+    "65380": 0.06998925656080246,
+    "66971": 0.10443811118602753,
+    "67107": 0.40448707342147827,
+    "67252": 0.7384889721870422,
+    "70711": 1.2791004180908203,
+    "738183": 1.2791004180908203,
+    "74113": 0.7384889721870422,
+    "74580": 1.2791004180908203,
+    "760266": 1.2791004180908203,
+    "ashgre1": 1.2791004180908203,
+    "astcra1": 1.2791004180908203,
+    "bafcur1": 0.40448707342147827,
+    "baffal1": 1.2791004180908203,
+    "banana": 1.2791004180908203,
+    "barant1": 1.2791004180908203,
+    "batbel1": 1.2791004180908203,
+    "baymac": 1.2791004180908203,
+    "bbwduc": 1.2791004180908203,
+    "bcwfin2": 1.2791004180908203,
+    "bkcdon": 1.2791004180908203,
+    "bkhpar": 1.2791004180908203,
+    "blchaw1": 1.2791004180908203,
+    "blheag1": 1.2791004180908203,
+    "blttit1": 1.2791004180908203,
+    "bncfly": 1.2791004180908203,
+    "bobfly1": 1.2791004180908203,
+    "brcmar1": 1.2791004180908203,
+    "brnowl": 1.2791004180908203,
+    "bucmot4": 1.2791004180908203,
+    "bucpar": 1.2791004180908203,
+    "bufpar": 0.33026230335235596,
+    "bunibi1": 0.7384889721870422,
+    "burowl": 1.2791004180908203,
+    "camfli1": 1.2791004180908203,
+    "chacha1": 0.15988755226135254,
+    "chbmoc1": 1.2791004180908203,
+    "chobla1": 1.2791004180908203,
+    "chvcon1": 0.2131834179162979,
+    "cibspi1": 1.2791004180908203,
+    "coffal1": 1.2791004180908203,
+    "compau": 0.2074974924325943,
+    "compot1": 0.6395502090454102,
+    "crbthr1": 1.2791004180908203,
+    "crebec1": 1.2791004180908203,
+    "dwatin1": 1.2791004180908203,
+    "epaori4": 1.2791004180908203,
+    "eulfly1": 1.2791004180908203,
+    "fabwre1": 1.2791004180908203,
+    "fepowl": 1.2791004180908203,
+    "ficman1": 1.2791004180908203,
+    "flawar1": 1.2791004180908203,
+    "fotfly": 1.2791004180908203,
+    "fusfly1": 0.6395502090454102,
+    "gilhum1": 1.2791004180908203,
+    "giwrai1": 1.2791004180908203,
+    "glteme1": 1.2791004180908203,
+    "grasal3": 1.2791004180908203,
+    "greani1": 1.2791004180908203,
+    "greant1": 1.2791004180908203,
+    "greela": 1.2791004180908203,
+    "grekis": 1.2791004180908203,
+    "grepot1": 1.2791004180908203,
+    "gretho2": 1.2791004180908203,
+    "greyel": 1.2791004180908203,
+    "grfdov1": 1.2791004180908203,
+    "grhtan1": 1.2791004180908203,
+    "gycwor1": 1.2791004180908203,
+    "horscr1": 1.2791004180908203,
+    "houspa": 1.2791004180908203,
+    "hyamac1": 0.38566330075263977,
+    "larela1": 1.2791004180908203,
+    "lesela1": 1.2791004180908203,
+    "lesgrf1": 1.2791004180908203,
+    "limpki": 0.6395502090454102,
+    "linwoo1": 1.2791004180908203,
+    "litcuc2": 1.2791004180908203,
+    "litnig1": 0.2074974924325943,
+    "mabpar": 1.2791004180908203,
+    "magant1": 0.5221905708312988,
+    "magtan2": 1.2791004180908203,
+    "masgna1": 1.2791004180908203,
+    "nacnig1": 0.3692444860935211,
+    "ocecra1": 1.2791004180908203,
+    "oliwoo1": 1.2791004180908203,
+    "orbtro3": 1.2791004180908203,
+    "orwpar": 0.3418539762496948,
+    "osprey": 1.2791004180908203,
+    "pabspi1": 1.2791004180908203,
+    "palhor3": 1.2791004180908203,
+    "paltan1": 1.2791004180908203,
+    "phecuc1": 1.2791004180908203,
+    "picpig2": 1.2791004180908203,
+    "pirfly1": 1.2791004180908203,
+    "plasla1": 1.2791004180908203,
+    "platyr1": 1.2791004180908203,
+    "plcjay1": 1.2791004180908203,
+    "pluibi1": 1.2791004180908203,
+    "purjay1": 0.5221905708312988,
+    "pvttyr1": 1.2791004180908203,
+    "ragmac1": 1.2791004180908203,
+    "rebscy1": 1.2791004180908203,
+    "recfin1": 1.2791004180908203,
+    "redjun": 0.354758620262146,
+    "relser1": 1.2791004180908203,
+    "rinkin1": 1.2791004180908203,
+    "rivwar1": 1.2791004180908203,
+    "roahaw": 1.2791004180908203,
+    "rubthr1": 1.2791004180908203,
+    "rufcac2": 1.2791004180908203,
+    "rufcas2": 1.2791004180908203,
+    "rufgna3": 1.2791004180908203,
+    "rufhor2": 0.5720310807228088,
+    "rufnig1": 1.2791004180908203,
+    "ruftho1": 1.2791004180908203,
+    "ruftof1": 1.2791004180908203,
+    "rumfly1": 1.2791004180908203,
+    "ruther1": 0.9044605493545532,
+    "rutjac1": 0.9044605493545532,
+    "sabspa1": 1.2791004180908203,
+    "saffin": 1.2791004180908203,
+    "saytan1": 1.2791004180908203,
+    "scadov1": 1.2791004180908203,
+    "schpar1": 1.2791004180908203,
+    "scther1": 1.2791004180908203,
+    "shcfly1": 1.2791004180908203,
+    "shshaw": 1.2791004180908203,
+    "shtnig1": 1.2791004180908203,
+    "sibtan2": 0.9044605493545532,
+    "smbani": 1.2791004180908203,
+    "smbtin1": 1.2791004180908203,
+    "sobcac1": 1.2791004180908203,
+    "sobtyr1": 1.2791004180908203,
+    "socfly1": 1.2791004180908203,
+    "sofspi1": 1.2791004180908203,
+    "souant1": 1.2791004180908203,
+    "soulap1": 1.2791004180908203,
+    "souscr1": 1.2791004180908203,
+    "spbant3": 1.2791004180908203,
+    "spispi1": 1.2791004180908203,
+    "sptnig1": 1.2791004180908203,
+    "squcuc1": 1.2791004180908203,
+    "stbwoo2": 1.2791004180908203,
+    "strcuc1": 1.2791004180908203,
+    "strher2": 0.7384889721870422,
+    "strowl1": 1.2791004180908203,
+    "swthum1": 1.2791004180908203,
+    "swtman1": 1.2791004180908203,
+    "tattin1": 1.2791004180908203,
+    "thlwre1": 1.2791004180908203,
+    "toctou1": 1.2791004180908203,
+    "trokin": 1.2791004180908203,
+    "trsowl": 0.2461629956960678,
+    "undtin1": 0.19283165037631989,
+    "varant1": 1.2791004180908203,
+    "watjac1": 1.2791004180908203,
+    "wesfie1": 1.2791004180908203,
+    "wfwduc1": 0.9044605493545532,
+    "whbant2": 1.2791004180908203,
+    "whbwar2": 1.2791004180908203,
+    "whiwoo1": 1.2791004180908203,
+    "whlspi1": 1.2791004180908203,
+    "whnjay1": 1.2791004180908203,
+    "whtdov": 0.15988755226135254,
+    "whwpic1": 1.2791004180908203,
+    "y00678": 1.2791004180908203,
+    "yebcar": 1.2791004180908203,
+    "yebela1": 1.2791004180908203,
+    "yecmac": 1.2791004180908203,
+    "yecpar": 1.2791004180908203,
+    "yehcar1": 1.2791004180908203,
+    "yeofly1": 1.2791004180908203
+  },
+  "phylo_prior": {},
+  "species_stats": {
+    "1161364": {
+      "index": 0,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "116570": {
+      "index": 1,
+      "n_pos": 13,
+      "n_neg": 695,
+      "prevalence": 0.018361581920903956,
+      "base_auc": 0.9449363586054234,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "1176823": {
+      "index": 2,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "1491113": {
+      "index": 3,
+      "n_pos": 79,
+      "n_neg": 629,
+      "prevalence": 0.1115819209039548,
+      "base_auc": 0.8052564850777807,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "1595929": {
+      "index": 4,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "209233": {
+      "index": 5,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "22930": {
+      "index": 6,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "22956": {
+      "index": 7,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "22961": {
+      "index": 8,
+      "n_pos": 36,
+      "n_neg": 672,
+      "prevalence": 0.05084745762711865,
+      "base_auc": 0.16960152116402114,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "22967": {
+      "index": 9,
+      "n_pos": 155,
+      "n_neg": 553,
+      "prevalence": 0.2189265536723164,
+      "base_auc": 0.7562386980108499,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "22973": {
+      "index": 10,
+      "n_pos": 212,
+      "n_neg": 496,
+      "prevalence": 0.2994350282485876,
+      "base_auc": 0.9230352251978089,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "22983": {
+      "index": 11,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "22985": {
+      "index": 12,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "23150": {
+      "index": 13,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "23154": {
+      "index": 14,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "23158": {
+      "index": 15,
+      "n_pos": 175,
+      "n_neg": 533,
+      "prevalence": 0.24717514124293785,
+      "base_auc": 0.9547788796569285,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "23176": {
+      "index": 16,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "23724": {
+      "index": 17,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "24279": {
+      "index": 18,
+      "n_pos": 173,
+      "n_neg": 535,
+      "prevalence": 0.2443502824858757,
+      "base_auc": 0.9600994003565447,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "24285": {
+      "index": 19,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "24287": {
+      "index": 20,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "24321": {
+      "index": 21,
+      "n_pos": 172,
+      "n_neg": 536,
+      "prevalence": 0.24293785310734464,
+      "base_auc": 0.8290307185005207,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "244024": {
+      "index": 22,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "25073": {
+      "index": 23,
+      "n_pos": 12,
+      "n_neg": 696,
+      "prevalence": 0.01694915254237288,
+      "base_auc": 0.8397988505747125,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "25092": {
+      "index": 24,
+      "n_pos": 24,
+      "n_neg": 684,
+      "prevalence": 0.03389830508474576,
+      "base_auc": 0.47191764132553604,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "25214": {
+      "index": 25,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "326272": {
+      "index": 26,
+      "n_pos": 23,
+      "n_neg": 685,
+      "prevalence": 0.03248587570621469,
+      "base_auc": 0.9624880990161853,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "41970": {
+      "index": 27,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "43435": {
+      "index": 28,
+      "n_pos": 12,
+      "n_neg": 696,
+      "prevalence": 0.01694915254237288,
+      "base_auc": 0.9858716475095786,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47144": {
+      "index": 29,
+      "n_pos": 15,
+      "n_neg": 693,
+      "prevalence": 0.0211864406779661,
+      "base_auc": 0.8661856661856662,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son01": {
+      "index": 30,
+      "n_pos": 23,
+      "n_neg": 685,
+      "prevalence": 0.03248587570621469,
+      "base_auc": 0.3510948905109489,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son02": {
+      "index": 31,
+      "n_pos": 7,
+      "n_neg": 701,
+      "prevalence": 0.009887005649717515,
+      "base_auc": 0.38017118402282457,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "47158son03": {
+      "index": 32,
+      "n_pos": 33,
+      "n_neg": 675,
+      "prevalence": 0.046610169491525424,
+      "base_auc": 0.7343434343434343,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son04": {
+      "index": 33,
+      "n_pos": 17,
+      "n_neg": 691,
+      "prevalence": 0.02401129943502825,
+      "base_auc": 0.8279135098322976,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son05": {
+      "index": 34,
+      "n_pos": 3,
+      "n_neg": 705,
+      "prevalence": 0.00423728813559322,
+      "base_auc": 0.3893617021276596,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "47158son06": {
+      "index": 35,
+      "n_pos": 18,
+      "n_neg": 690,
+      "prevalence": 0.025423728813559324,
+      "base_auc": 0.9753623188405797,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son07": {
+      "index": 36,
+      "n_pos": 48,
+      "n_neg": 660,
+      "prevalence": 0.06779661016949153,
+      "base_auc": 1.0,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son08": {
+      "index": 37,
+      "n_pos": 17,
+      "n_neg": 691,
+      "prevalence": 0.02401129943502825,
+      "base_auc": 0.42491700008512806,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son09": {
+      "index": 38,
+      "n_pos": 6,
+      "n_neg": 702,
+      "prevalence": 0.00847457627118644,
+      "base_auc": 0.4145299145299145,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "47158son10": {
+      "index": 39,
+      "n_pos": 33,
+      "n_neg": 675,
+      "prevalence": 0.046610169491525424,
+      "base_auc": 0.9573737373737374,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son11": {
+      "index": 40,
+      "n_pos": 36,
+      "n_neg": 672,
+      "prevalence": 0.05084745762711865,
+      "base_auc": 0.8928571428571429,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son12": {
+      "index": 41,
+      "n_pos": 5,
+      "n_neg": 703,
+      "prevalence": 0.007062146892655367,
+      "base_auc": 0.42318634423897583,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "47158son13": {
+      "index": 42,
+      "n_pos": 36,
+      "n_neg": 672,
+      "prevalence": 0.05084745762711865,
+      "base_auc": 0.8988095238095238,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son14": {
+      "index": 43,
+      "n_pos": 12,
+      "n_neg": 696,
+      "prevalence": 0.01694915254237288,
+      "base_auc": 0.35344827586206895,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son15": {
+      "index": 44,
+      "n_pos": 12,
+      "n_neg": 696,
+      "prevalence": 0.01694915254237288,
+      "base_auc": 0.3448275862068966,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son16": {
+      "index": 45,
+      "n_pos": 12,
+      "n_neg": 696,
+      "prevalence": 0.01694915254237288,
+      "base_auc": 0.3448275862068966,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son17": {
+      "index": 46,
+      "n_pos": 43,
+      "n_neg": 665,
+      "prevalence": 0.06073446327683616,
+      "base_auc": 0.9758873929008568,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son18": {
+      "index": 47,
+      "n_pos": 12,
+      "n_neg": 696,
+      "prevalence": 0.01694915254237288,
+      "base_auc": 0.3706896551724138,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son19": {
+      "index": 48,
+      "n_pos": 5,
+      "n_neg": 703,
+      "prevalence": 0.007062146892655367,
+      "base_auc": 0.9642958748221906,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "47158son20": {
+      "index": 49,
+      "n_pos": 12,
+      "n_neg": 696,
+      "prevalence": 0.01694915254237288,
+      "base_auc": 0.35344827586206895,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son21": {
+      "index": 50,
+      "n_pos": 22,
+      "n_neg": 686,
+      "prevalence": 0.031073446327683617,
+      "base_auc": 0.9985422740524781,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son22": {
+      "index": 51,
+      "n_pos": 24,
+      "n_neg": 684,
+      "prevalence": 0.03389830508474576,
+      "base_auc": 1.0,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son23": {
+      "index": 52,
+      "n_pos": 24,
+      "n_neg": 684,
+      "prevalence": 0.03389830508474576,
+      "base_auc": 1.0,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son24": {
+      "index": 53,
+      "n_pos": 24,
+      "n_neg": 684,
+      "prevalence": 0.03389830508474576,
+      "base_auc": 1.0,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "47158son25": {
+      "index": 54,
+      "n_pos": 84,
+      "n_neg": 624,
+      "prevalence": 0.11864406779661017,
+      "base_auc": 0.9807692307692307,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "476521": {
+      "index": 55,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "516975": {
+      "index": 56,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "517063": {
+      "index": 57,
+      "n_pos": 307,
+      "n_neg": 401,
+      "prevalence": 0.4336158192090395,
+      "base_auc": 0.7734003752832902,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "555123": {
+      "index": 58,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "555145": {
+      "index": 59,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "555146": {
+      "index": 60,
+      "n_pos": 203,
+      "n_neg": 505,
+      "prevalence": 0.2867231638418079,
+      "base_auc": 0.9405940594059407,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "64898": {
+      "index": 61,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "65377": {
+      "index": 62,
+      "n_pos": 9,
+      "n_neg": 699,
+      "prevalence": 0.012711864406779662,
+      "base_auc": 0.9138451756477508,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "65380": {
+      "index": 63,
+      "n_pos": 333,
+      "n_neg": 375,
+      "prevalence": 0.4703389830508475,
+      "base_auc": 0.9684564564564564,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "66971": {
+      "index": 64,
+      "n_pos": 149,
+      "n_neg": 559,
+      "prevalence": 0.21045197740112995,
+      "base_auc": 0.9334501926978904,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "67107": {
+      "index": 65,
+      "n_pos": 9,
+      "n_neg": 699,
+      "prevalence": 0.012711864406779662,
+      "base_auc": 0.8202193609918931,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "67252": {
+      "index": 66,
+      "n_pos": 2,
+      "n_neg": 706,
+      "prevalence": 0.002824858757062147,
+      "base_auc": 0.7740793201133145,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "70711": {
+      "index": 67,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "738183": {
+      "index": 68,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "74113": {
+      "index": 69,
+      "n_pos": 2,
+      "n_neg": 706,
+      "prevalence": 0.002824858757062147,
+      "base_auc": 0.7492917847025496,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "74580": {
+      "index": 70,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "760266": {
+      "index": 71,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "ashgre1": {
+      "index": 72,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "astcra1": {
+      "index": 73,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bafcur1": {
+      "index": 74,
+      "n_pos": 9,
+      "n_neg": 699,
+      "prevalence": 0.012711864406779662,
+      "base_auc": 0.9623271340009537,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "baffal1": {
+      "index": 75,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "banana": {
+      "index": 76,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "barant1": {
+      "index": 77,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "batbel1": {
+      "index": 78,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "baymac": {
+      "index": 79,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bbwduc": {
+      "index": 80,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bcwfin2": {
+      "index": 81,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bkcdon": {
+      "index": 82,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bkhpar": {
+      "index": 83,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "blchaw1": {
+      "index": 84,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "blheag1": {
+      "index": 85,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "blttit1": {
+      "index": 86,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bncfly": {
+      "index": 87,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bobfly1": {
+      "index": 88,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "brcmar1": {
+      "index": 89,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "brnowl": {
+      "index": 90,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bucmot4": {
+      "index": 91,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bucpar": {
+      "index": 92,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "bufpar": {
+      "index": 93,
+      "n_pos": 14,
+      "n_neg": 694,
+      "prevalence": 0.01977401129943503,
+      "base_auc": 0.9913544668587897,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "bunibi1": {
+      "index": 94,
+      "n_pos": 2,
+      "n_neg": 706,
+      "prevalence": 0.002824858757062147,
+      "base_auc": 0.5410764872521248,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "burowl": {
+      "index": 95,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "camfli1": {
+      "index": 96,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "chacha1": {
+      "index": 97,
+      "n_pos": 63,
+      "n_neg": 645,
+      "prevalence": 0.08898305084745763,
+      "base_auc": 0.9685000615233172,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "chbmoc1": {
+      "index": 98,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "chobla1": {
+      "index": 99,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "chvcon1": {
+      "index": 100,
+      "n_pos": 35,
+      "n_neg": 673,
+      "prevalence": 0.04943502824858757,
+      "base_auc": 0.9996603693483337,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "cibspi1": {
+      "index": 101,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "coffal1": {
+      "index": 102,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "compau": {
+      "index": 103,
+      "n_pos": 37,
+      "n_neg": 671,
+      "prevalence": 0.052259887005649715,
+      "base_auc": 0.9784508800902243,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "compot1": {
+      "index": 104,
+      "n_pos": 3,
+      "n_neg": 705,
+      "prevalence": 0.00423728813559322,
+      "base_auc": 0.9394799054373523,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "crbthr1": {
+      "index": 105,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "crebec1": {
+      "index": 106,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "dwatin1": {
+      "index": 107,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "epaori4": {
+      "index": 108,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "eulfly1": {
+      "index": 109,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "fabwre1": {
+      "index": 110,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "fepowl": {
+      "index": 111,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "ficman1": {
+      "index": 112,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "flawar1": {
+      "index": 113,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "fotfly": {
+      "index": 114,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "fusfly1": {
+      "index": 115,
+      "n_pos": 3,
+      "n_neg": 705,
+      "prevalence": 0.00423728813559322,
+      "base_auc": 0.9659574468085107,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "gilhum1": {
+      "index": 116,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "giwrai1": {
+      "index": 117,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "glteme1": {
+      "index": 118,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "grasal3": {
+      "index": 119,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "greani1": {
+      "index": 120,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "greant1": {
+      "index": 121,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "greela": {
+      "index": 122,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "grekis": {
+      "index": 123,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "grepot1": {
+      "index": 124,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "gretho2": {
+      "index": 125,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "greyel": {
+      "index": 126,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "grfdov1": {
+      "index": 127,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "grhtan1": {
+      "index": 128,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "gycwor1": {
+      "index": 129,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "horscr1": {
+      "index": 130,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "houspa": {
+      "index": 131,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "hyamac1": {
+      "index": 132,
+      "n_pos": 10,
+      "n_neg": 698,
+      "prevalence": 0.014124293785310734,
+      "base_auc": 0.9929799426934097,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "larela1": {
+      "index": 133,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "lesela1": {
+      "index": 134,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "lesgrf1": {
+      "index": 135,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "limpki": {
+      "index": 136,
+      "n_pos": 3,
+      "n_neg": 705,
+      "prevalence": 0.00423728813559322,
+      "base_auc": 0.9234042553191489,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "linwoo1": {
+      "index": 137,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "litcuc2": {
+      "index": 138,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "litnig1": {
+      "index": 139,
+      "n_pos": 37,
+      "n_neg": 671,
+      "prevalence": 0.052259887005649715,
+      "base_auc": 0.9299552906110283,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "mabpar": {
+      "index": 140,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "magant1": {
+      "index": 141,
+      "n_pos": 5,
+      "n_neg": 703,
+      "prevalence": 0.007062146892655367,
+      "base_auc": 0.9900426742532006,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "magtan2": {
+      "index": 142,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "masgna1": {
+      "index": 143,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "nacnig1": {
+      "index": 144,
+      "n_pos": 11,
+      "n_neg": 697,
+      "prevalence": 0.015536723163841809,
+      "base_auc": 0.4468501369505673,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "ocecra1": {
+      "index": 145,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "oliwoo1": {
+      "index": 146,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "orbtro3": {
+      "index": 147,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "orwpar": {
+      "index": 148,
+      "n_pos": 13,
+      "n_neg": 695,
+      "prevalence": 0.018361581920903956,
+      "base_auc": 0.9960154952960708,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "osprey": {
+      "index": 149,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "pabspi1": {
+      "index": 150,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "palhor3": {
+      "index": 151,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "paltan1": {
+      "index": 152,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "phecuc1": {
+      "index": 153,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "picpig2": {
+      "index": 154,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "pirfly1": {
+      "index": 155,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "plasla1": {
+      "index": 156,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "platyr1": {
+      "index": 157,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "plcjay1": {
+      "index": 158,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "pluibi1": {
+      "index": 159,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "purjay1": {
+      "index": 160,
+      "n_pos": 5,
+      "n_neg": 703,
+      "prevalence": 0.007062146892655367,
+      "base_auc": 0.9581792318634423,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "pvttyr1": {
+      "index": 161,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "ragmac1": {
+      "index": 162,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "rebscy1": {
+      "index": 163,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "recfin1": {
+      "index": 164,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "redjun": {
+      "index": 165,
+      "n_pos": 12,
+      "n_neg": 696,
+      "prevalence": 0.01694915254237288,
+      "base_auc": 0.6538553639846744,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "relser1": {
+      "index": 166,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "rinkin1": {
+      "index": 167,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "rivwar1": {
+      "index": 168,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "roahaw": {
+      "index": 169,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "rubthr1": {
+      "index": 170,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "rufcac2": {
+      "index": 171,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "rufcas2": {
+      "index": 172,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "rufgna3": {
+      "index": 173,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "rufhor2": {
+      "index": 174,
+      "n_pos": 4,
+      "n_neg": 704,
+      "prevalence": 0.005649717514124294,
+      "base_auc": 0.9435369318181818,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "rufnig1": {
+      "index": 175,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "ruftho1": {
+      "index": 176,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "ruftof1": {
+      "index": 177,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "rumfly1": {
+      "index": 178,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "ruther1": {
+      "index": 179,
+      "n_pos": 1,
+      "n_neg": 707,
+      "prevalence": 0.0014124293785310734,
+      "base_auc": 1.0,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "rutjac1": {
+      "index": 180,
+      "n_pos": 1,
+      "n_neg": 707,
+      "prevalence": 0.0014124293785310734,
+      "base_auc": 0.917963224893918,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "sabspa1": {
+      "index": 181,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "saffin": {
+      "index": 182,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "saytan1": {
+      "index": 183,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "scadov1": {
+      "index": 184,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "schpar1": {
+      "index": 185,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "scther1": {
+      "index": 186,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "shcfly1": {
+      "index": 187,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "shshaw": {
+      "index": 188,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "shtnig1": {
+      "index": 189,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "sibtan2": {
+      "index": 190,
+      "n_pos": 1,
+      "n_neg": 707,
+      "prevalence": 0.0014124293785310734,
+      "base_auc": 1.0,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "smbani": {
+      "index": 191,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "smbtin1": {
+      "index": 192,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "sobcac1": {
+      "index": 193,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "sobtyr1": {
+      "index": 194,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "socfly1": {
+      "index": 195,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "sofspi1": {
+      "index": 196,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "souant1": {
+      "index": 197,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "soulap1": {
+      "index": 198,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "souscr1": {
+      "index": 199,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "spbant3": {
+      "index": 200,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "spispi1": {
+      "index": 201,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "sptnig1": {
+      "index": 202,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "squcuc1": {
+      "index": 203,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "stbwoo2": {
+      "index": 204,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "strcuc1": {
+      "index": 205,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "strher2": {
+      "index": 206,
+      "n_pos": 2,
+      "n_neg": 706,
+      "prevalence": 0.002824858757062147,
+      "base_auc": 0.3803116147308782,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "strowl1": {
+      "index": 207,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "swthum1": {
+      "index": 208,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "swtman1": {
+      "index": 209,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "tattin1": {
+      "index": 210,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "thlwre1": {
+      "index": 211,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "toctou1": {
+      "index": 212,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "trokin": {
+      "index": 213,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "trsowl": {
+      "index": 214,
+      "n_pos": 26,
+      "n_neg": 682,
+      "prevalence": 0.03672316384180791,
+      "base_auc": 0.7521430182720505,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "undtin1": {
+      "index": 215,
+      "n_pos": 43,
+      "n_neg": 665,
+      "prevalence": 0.06073446327683616,
+      "base_auc": 0.8702220667948942,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "varant1": {
+      "index": 216,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "watjac1": {
+      "index": 217,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "wesfie1": {
+      "index": 218,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "wfwduc1": {
+      "index": 219,
+      "n_pos": 1,
+      "n_neg": 707,
+      "prevalence": 0.0014124293785310734,
+      "base_auc": 1.0,
+      "is_zero_shot": false,
+      "is_rare": true
+    },
+    "whbant2": {
+      "index": 220,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "whbwar2": {
+      "index": 221,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "whiwoo1": {
+      "index": 222,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "whlspi1": {
+      "index": 223,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "whnjay1": {
+      "index": 224,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "whtdov": {
+      "index": 225,
+      "n_pos": 63,
+      "n_neg": 645,
+      "prevalence": 0.08898305084745763,
+      "base_auc": 0.9929125138427464,
+      "is_zero_shot": false,
+      "is_rare": false
+    },
+    "whwpic1": {
+      "index": 226,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "y00678": {
+      "index": 227,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "yebcar": {
+      "index": 228,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "yebela1": {
+      "index": 229,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "yecmac": {
+      "index": 230,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "yecpar": {
+      "index": 231,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "yehcar1": {
+      "index": 232,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    },
+    "yeofly1": {
+      "index": 233,
+      "n_pos": 0,
+      "n_neg": 708,
+      "prevalence": 0.0,
+      "base_auc": 0.5,
+      "is_zero_shot": true,
+      "is_rare": false
+    }
+  },
+  "n_samples": 708,
+  "n_classes": 234,
+  "description": "Per-species Platt calibration + prevalence weights + phylogenetic priors"
+}

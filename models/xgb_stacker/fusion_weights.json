@@ -1,0 +1,11 @@
+{
+  "base_perch_weight": 0.9833667563789141,
+  "xgb_stacker_weight": 0.01663324362108588,
+  "oof_auc_base": 0.7999212856838273,
+  "oof_auc_xgb": 0.5987279316323356,
+  "oof_auc_ensemble": 0.7643939663793657,
+  "n_models_trained": 63,
+  "n_zero_shot_skipped": 171,
+  "n_samples": 708,
+  "description": "XGBoost meta-learner on Perch+SSM OOF logits. Late fusion with EoS Perch base."
+}
