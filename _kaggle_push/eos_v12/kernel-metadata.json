@@ -1,0 +1,27 @@
+{
+    "id": "hellodave2035/eos-submit-v28-v11b",
+    "title": "EoS Submit v28 (V11b + Perch noDFT + 3 models)",
+    "code_file": "eos_submit_v11b.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": true,
+    "enable_gpu": false,
+    "enable_tpu": false,
+    "enable_internet": false,
+    "dataset_sources": [
+        "tuckerarrants/bc2026-distilled-sed-public",
+        "tuckerarrants/birdclef-2026-waveform-cache",
+        "jaejohn/perch-meta",
+        "hellodave2035/birdclef-perch-models",
+        "tuckerarrants/perch-v2-no-dft-onnx",
+        "hideyukizushi/sgkfk-202604041716",
+        "hellodave2035/birdclef-species-boost"
+    ],
+    "competition_sources": [
+        "birdclef-2026"
+    ],
+    "kernel_sources": [],
+    "model_sources": [
+        "google/bird-vocalization-classifier/tensorFlow2/perch_v2_cpu/1"
+    ]
+}
