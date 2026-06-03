@@ -1,0 +1,26 @@
+{
+    "id": "hellodave2035/eos-submit-v22",
+    "title": "EoS Submit v22 (OOF-optimized post-proc)",
+    "code_file": "eos_submit_v22.ipynb",
+    "language": "python",
+    "kernel_type": "notebook",
+    "is_private": true,
+    "enable_gpu": false,
+    "enable_tpu": false,
+    "enable_internet": false,
+    "dataset_sources": [
+        "hellodave2035/birdclef-perch-models",
+        "hideyukizushi/sgkfk-202604041716",
+        "tuckerarrants/bc2026-distilled-sed-public",
+        "tuckerarrants/birdclef-2026-waveform-cache",
+        "hellodave2035/birdclef-species-boost"
+    ],
+    "competition_sources": [
+        "birdclef-2026"
+    ],
+    "kernel_sources": [],
+    "model_sources": [
+        "google/bird-vocalization-classifier/tensorFlow2/perch_v2_cpu/1",
+        "shadiakiki1/birdnet-analyzer/tflite/birdnet_global_6k_v2.4_model_fp32/1"
+    ]
+}
