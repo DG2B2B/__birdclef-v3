@@ -1,6 +1,6 @@
 {
-    "id": "hellodave2035/eos-submit-v28-v11b",
-    "title": "EoS Submit v28 (V11b + Perch noDFT + 3 models)",
+    "id": "hellodave2035/eos-submit-v28brd2",
+    "title": "EoS Submit v28BRD2 (BirdNET tflite fix)",
     "code_file": "eos_submit_v11b.ipynb",
     "language": "python",
     "kernel_type": "notebook",
@@ -22,6 +22,7 @@
     ],
     "kernel_sources": [],
     "model_sources": [
-        "google/bird-vocalization-classifier/tensorFlow2/perch_v2_cpu/1"
+        "google/bird-vocalization-classifier/tensorFlow2/perch_v2_cpu/1",
+        "shadiakiki1/birdnet-analyzer/tflite/birdnet_global_6k_v2.4_model_fp32-1/1"
     ]
 }

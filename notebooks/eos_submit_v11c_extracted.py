@@ -1580,7 +1580,7 @@ if 'Model_3' in _ensemble_models:
     CFG["best_fusion"]["lambda_texture"]       = 1.1
     CFG["best_fusion"]["lambda_proxy_texture"] = 0.9
     CFG["threshold_grid"] = [0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.65,0.70]
-    CFG["tta_shifts"]        = [0, 1, -1, 2, -2]
+    CFG["tta_shifts"]        = [0, 1, -1]  # V28BRD: 3 shifts instead of 5 (save ~40% time)
     CFG["rank_aware_power"]  = 0.4
     CFG["delta_shift_alpha"] = 0.20
     CFG["mlp_params"] = {
@@ -5038,6 +5038,7 @@ if 'Model_4' in _ensemble_models:
     print(f"USE_ONNX = {USE_ONNX}")
     
     EXTERNAL_CACHE_DIRS = [
+        Path("/kaggle/working/perch_cache"),  # V28BRD: reuse Model_3 cache
         Path("/kaggle/input/notebooks/vyankteshdwivedi/notebook1b25083f0d"),
         Path("/kaggle/input/datasets/jaejohn/perch-meta"),
     ]

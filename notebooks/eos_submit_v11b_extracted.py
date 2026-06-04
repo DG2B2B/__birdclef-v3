@@ -1,7 +1,50 @@
+# =================================================================
+# CELL 0 - SCRIPT DE DIAGNOSTIC - VERIFICATION BIRDNET 2.4
+# =================================================================
+from pathlib import Path
+import os
+
+print("--- DÉBUT DE LA DÉTECTION BIRDNET ---")
+found_model = None
+found_labels = None
+
+# Scan récursif pour trouver le fichier du modèle
+for p in Path("/kaggle/input").rglob("*.tflite"):
+    if "birdnet" in p.name.lower():
+        print(f"✅ Modèle TFLite détecté : {p}")
+        found_model = p
+
+# Scan récursif pour trouver le fichier de labels
+for p in Path("/kaggle/input").rglob("*.txt"):
+    if "birdnet" in p.name.lower() or "label" in p.name.lower():
+        # S'assurer qu'il s'agit des labels officiels de BirdNET
+        if "global" in p.name.lower() or "6k" in p.name.lower():
+            print(f"✅ Fichier de labels détecté : {p}")
+            found_labels = p
+
+if found_model and found_labels:
+    print("\n[OK] BirdNET est correctement attaché à votre environnement.")
+    try:
+        # Tenter d'instancier l'interpréteur TensorFlow Lite pour valider la compatibilité
+        try:
+            from tflite_runtime.interpreter import Interpreter
+        except ImportError:
+            from tensorflow.lite.python.interpreter import Interpreter
+            
+        interpreter = Interpreter(model_path=str(found_model))
+        interpreter.allocate_tensors()
+        print("✅ L'interpréteur TFLite a alloué les tenseurs avec succès.")
+        print("-> Votre Model_4 basculera automatiquement sur le blend à 3 voies.")
+    except Exception as e:
+        print(f"❌ Erreur lors de l'initialisation de l'interpréteur : {e}")
+else:
+    print("\n❌ ÉCHEC : BirdNET n'est pas détecté. Vérifiez que vous l'avez bien ajouté depuis l'onglet 'Models'.")
+
+
 # === CELL 1 ===
 
 solutions = {
- 'type_add' : 'TAX_SMOOTHING',
+ 'type_add' : 'TAX_SMOOTHING',  # Conservation du lissage taxonomique direct
  'task'     : 'run Model_2_SED once',
  'Models'   : [
   {'Model':'Model_2','subm':'subm_2.csv','weight':0.020,'xSED':[],'LB':'0.928'},
@@ -9,7 +52,6 @@ solutions = {
   {'Model':'Model_4','subm':'subm_4.csv','weight':0.967,'xSED':[0.60,0.40],'LB':'0.949'}
  ]
 }
-
 
 # === CELL 2 ===
 
@@ -1538,7 +1580,7 @@ if 'Model_3' in _ensemble_models:
     CFG["best_fusion"]["lambda_texture"]       = 1.1
     CFG["best_fusion"]["lambda_proxy_texture"] = 0.9
     CFG["threshold_grid"] = [0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.65,0.70]
-    CFG["tta_shifts"]        = [0, 1, -1, 2, -2]
+    CFG["tta_shifts"]        = [0, 1, -1]  # V28BRD: 3 shifts instead of 5 (save ~40% time)
     CFG["rank_aware_power"]  = 0.4
     CFG["delta_shift_alpha"] = 0.20
     CFG["mlp_params"] = {
@@ -4996,6 +5038,7 @@ if 'Model_4' in _ensemble_models:
     print(f"USE_ONNX = {USE_ONNX}")
     
     EXTERNAL_CACHE_DIRS = [
+        Path("/kaggle/working/perch_cache"),  # V28BRD: reuse Model_3 cache
         Path("/kaggle/input/notebooks/vyankteshdwivedi/notebook1b25083f0d"),
         Path("/kaggle/input/datasets/jaejohn/perch-meta"),
     ]
@@ -5721,7 +5764,7 @@ if 'Model_4' in _ensemble_models:
     
     if _bn_model_path is None:
         USE_BIRDNET = False
-        print("BirdNET model not found ? will use original 60/40 blend")
+        print("BirdNET model not found ! will use original 60/40 blend")
         BN_TO_COMP = {}
         BN_PROXY   = {}
     else:
