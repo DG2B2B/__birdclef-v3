@@ -9,6 +9,6 @@ Free use. This is a raw repo, you'll also got all my thinkings in .md docs.
 
 Having a data-science competition was an incredible experience in terms of learning : models, blending, ML pipeline, py scripting, ... was huge. 
 
-Can't wait next year to reach the top 1% (top 5% now)
+Can't wait next year to reach the top ! ;)
 
 HD
